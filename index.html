@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple image search app with loading, empty, and error states.">
+  <title>SnapFind — Image Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">IMAGE EXPLORER</p>
+      <h1>Snap<span>Find</span></h1>
+      <p class="subtitle">Type a word. Discover images. Explore something new.</p>
+
+      <form id="searchForm" class="search-bar">
+        <label class="sr-only" for="searchInput">Search for images</label>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search for anything..."
+          autocomplete="off"
+          required
+        >
+        <button type="submit" id="searchButton">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="status" class="status" aria-live="polite"></div>
+    <section id="results" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>SnapFind · Images from Wikimedia Commons</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
